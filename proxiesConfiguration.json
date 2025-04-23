@@ -1,44 +1,82 @@
 {
   "configs": {
-    "etrm": {
-      "cluster": "bcm-energy-production",
-      "instance": "etrm-14",
-      "port": 54320
-    },
     "cascade-PROD": {
       "cluster": "bcm-energy-production",
       "instance": "cascade",
+      "region": "europe-west1",
       "port": 25432
     },
     "cascade-beta": {
       "cluster": "bcm-development",
       "instance": "cascade",
-      "port": 5432
+      "region": "europe-west1",
+      "port": 45431
     },
-    "dam": {
+    "dam-PROD": {
       "cluster": "bcm-energy-production",
       "instance": "dam",
+      "region": "europe-west1",
       "port": 45432
     },
     "dam-beta": {
       "cluster": "bcm-development",
       "instance": "dam",
+      "region": "europe-west1",
       "port": 45433
     },
-    "ruisseau-BETA": {
+    "etrm": {
+      "cluster": "bcm-energy-production",
+      "instance": "etrm-14",
+      "region": "europe-west1",
+      "port": 54320
+    },
+    "hermes-PROD": {
+      "cluster": "bcm-energy-production",
+      "instance": "hermes-14",
+      "region": "europe-west1",
+      "port": 45435
+    },
+    "hermes-beta": {
+      "cluster": "bcm-development",
+      "instance": "hermes",
+      "region": "europe-west3",
+      "port": 45438
+    },
+    "niagara-PROD": {
+      "cluster": "bcm-energy-production",
+      "instance": "niagara",
+      "region": "europe-west1",
+      "port": 25434
+    },
+    "niagara-beta": {
+      "cluster": "bcm-development",
+      "instance": "niagara",
+      "region": "europe-west1",
+      "port": 45434
+    },
+    "ruisseau-beta": {
       "cluster": "bcm-development",
       "instance": "dam",
+      "region": "europe-west1",
       "port": 45432
     },
     "trickle-down-PROD": {
       "cluster": "bcm-energy-production",
       "instance": "trickle-down",
+      "region": "europe-west1",
       "port": 25433
     },
-    "atlantis": {
+    "atlantis-PROD": {
       "cluster": "bcm-energy-production",
       "instance": "atlantis-14",
+      "region": "europe-west1",
       "port": 35432
+    },
+    "yaulogyve": {
+      "cluster": "bcm-energy-production",
+      "instance": "import-gyve",
+      "region": "europe-west1",
+      "port": 6234
     }
   }
 }

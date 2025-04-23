@@ -31,6 +31,7 @@ Edit file `./proxiesConfiguration.json`
     "dbInstanceTitle": {
       "cluster": "gcloud-projectName",
       "instance": "dbInstanceName",
+      "region": "europe-west1",
       "port": 54320
     },
     ...

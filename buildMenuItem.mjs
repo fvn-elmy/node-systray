@@ -5,7 +5,7 @@ function logRunningProxies(runningProxies) {
     .join(', '));
 }
 
-const buildMenuItem = ([ entryName, {cluster, instance, port}]) =>
+const buildMenuItem = ([ entryName, {cluster, instance, region, port}]) =>
   ({ sendAction, startProxy, runningProxies }) => {
     const proxy = {
       title: entryName,
@@ -17,12 +17,13 @@ const buildMenuItem = ([ entryName, {cluster, instance, port}]) =>
         const instanceName = instance;
         const portNumber = port;
         const envName = cluster;
+        const regionName = region;
         if (!proxy.checked) {
-          console.log(`Starting proxy for ${entryName}: ${envName}-${instanceName} at ${portNumber} ...`);
-          runningProxies.push(startProxy(entryName, envName, instanceName, portNumber));
+          console.log(`Starting proxy for ${entryName}: ${envName}:${regionName}-${instanceName} at ${portNumber} ...`);
+          runningProxies.push(startProxy(entryName, envName, regionName, instanceName, portNumber));
         }
         else {
-          console.log(`... Stopping proxy for  ${entryName}: ${envName}-${instanceName} at ${portNumber}`);
+          console.log(`... Stopping proxy for  ${entryName}: ${envName}:${regionName}-${instanceName} at ${portNumber}`);
           logRunningProxies(runningProxies);
           runningProxies
             .filter(({entryName}) => entryName === itemTitle)
