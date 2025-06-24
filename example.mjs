@@ -10,7 +10,7 @@ let runnings = [];
 
 const startProxy = (entryName, cluster, instance, port) => ({
   entryName,
-  process: spawn(PROXY_BIN, [`${cluster}:europe-west1:${instance}`, '-p', `${port}`])
+  process: spawn(PROXY_BIN, [`${cluster}:europe-west1:${instance}`, '-p', `${port}`, '--auto-iam-authn'])
 });
 
 const itemExit = {
